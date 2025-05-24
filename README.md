@@ -26,6 +26,37 @@ ghostscan 10.0.0.1 20 1024
 
 ---
 
+## 🏗️ Installation
+
+### Arch Linux (AUR)
+```sh
+git clone https://github.com/ghostkellz/ghostscan.git
+cd ghostscan
+makepkg -si
+```
+
+### Debian/Ubuntu
+```sh
+git clone https://github.com/ghostkellz/ghostscan.git
+cd ghostscan
+dpkg-buildpackage -us -uc -b
+sudo dpkg -i ../ghostscan_*.deb
+```
+
+---
+
+## 🖥️ Interactive Mode
+
+Ghostscan supports an interactive CLI mode for ad-hoc scanning and result exploration (planned).
+
+---
+
+## 📚 Documentation & Examples
+
+See [examples/](examples/) for real-world usage and integration. More docs coming soon!
+
+---
+
 ## ⚙️ Features
 
 * 🔥 Zero dependencies

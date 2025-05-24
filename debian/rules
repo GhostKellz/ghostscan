@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_build:
+	zig build -Drelease-fast
+
+override_dh_auto_install:
+	install -Dm755 zig-out/bin/ghostscan $(DESTDIR)/usr/bin/ghostscan
+	install -Dm644 LICENSE $(DESTDIR)/usr/share/doc/ghostscan/LICENSE
+	install -Dm644 README.md $(DESTDIR)/usr/share/doc/ghostscan/README.md

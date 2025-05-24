@@ -1,0 +1,12 @@
+Source: ghostscan
+Section: net
+Priority: optional
+Maintainer: GhostKellz <ghostkellz@protonmail.com>
+Build-Depends: zig, debhelper (>= 11)
+Standards-Version: 4.5.0
+Homepage: https://ghostkellz.sh
+Package: ghostscan
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Blazing-fast Zig-native TCP port scanner
+ A blazing-fast, Zig-native TCP port scanner for terminal ninjas and homelab hackers.

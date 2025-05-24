@@ -131,6 +131,11 @@ pub export fn add(a: i32, b: i32) i32 {
 // ghostscan_lib placeholder for future library code
 // This can be expanded for modularity, e.g. async scanning, utils, etc.
 
+pub fn interactive() void {
+    // Placeholder for interactive CLI mode
+    // Future: implement TUI or REPL for ad-hoc scanning
+}
+
 pub fn example() void {
     // Placeholder function
 }
