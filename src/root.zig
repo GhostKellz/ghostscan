@@ -131,9 +131,36 @@ pub export fn add(a: i32, b: i32) i32 {
 // ghostscan_lib placeholder for future library code
 // This can be expanded for modularity, e.g. async scanning, utils, etc.
 
-pub fn interactive() void {
-    // Placeholder for interactive CLI mode
-    // Future: implement TUI or REPL for ad-hoc scanning
+pub fn interactive() !void {
+    // Minimal TUI stub: print a table header and wait for user input
+    const stdout = std.io.getStdOut().writer();
+    try stdout.print("\nTUI Mode (prototype)\n", .{});
+    try stdout.print("Target        Port   State   Service\n", .{});
+    try stdout.print("-----------------------------------\n", .{});
+    // In a real TUI, this would update live and handle keyboard input
+    // For now, just wait for Enter to exit
+    var buf: [8]u8 = undefined;
+    _ = try std.io.getStdIn().read(&buf);
+}
+
+pub fn detect_service(port: u16, banner: ?[]const u8) []const u8 {
+    // Simple port-to-service mapping
+    return switch (port) {
+        21 => "ftp",
+        22 => "ssh",
+        23 => "telnet",
+        25 => "smtp",
+        53 => "dns",
+        80 => "http",
+        110 => "pop3",
+        143 => "imap",
+        443 => "https",
+        3306 => "mysql",
+        5432 => "postgres",
+        6379 => "redis",
+        8080 => "http-alt",
+        else => banner orelse "?",
+    };
 }
 
 pub fn example() void {
