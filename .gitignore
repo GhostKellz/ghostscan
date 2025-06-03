@@ -1,2 +1,51 @@
-zig-cache/
-zig-out/
+# === Rust Build ===
+/target/
+**/*.rs.bk
+
+# === Cargo ===
+/Cargo.lock
+/.cargo/
+
+# === Tools ===
+/.bench/
+/*.log
+
+# === Editors ===
+# VSCode
+.vscode/
+/*.code-workspace
+
+# JetBrains (CLion, IntelliJ, etc.)
+.idea/
+*.iml
+
+# === OS Specific ===
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# === Backup files ===
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# === Misc ===
+/node_modules/
+/pkg/
+/docs/
+
+# === Custom ===
+/dist/
+/build/
+/output/
+/bin/
+/debug/
+/release/

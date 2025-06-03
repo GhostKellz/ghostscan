@@ -1,4 +1,4 @@
-# Maintainer: GhostKellz <ghostkellz@protonmail.com>
+# Maintainer: GhostKellz <ckelley@ghostkellz.sh>
 
 pkgname=ghostscan
 gitname=ghostscan
